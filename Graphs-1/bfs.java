@@ -14,9 +14,17 @@ public class bfs{
 
     }
 
-    public static void bfs(ArrayList<Edge>[]graph){
-        Queue<Integer> q = new LinkedList<>();
+    public static void bfs(ArrayList<Edge>[]graph){ 
         boolean visited[] = new boolean[graph.length];
+
+        for(int i=0 ; i<graph.length ; i++){
+            bfsUtil(graph, visited);
+        }
+    }
+
+    public static void bfsUtil(ArrayList<Edge>[]graph, boolean[]visited){
+        Queue<Integer> q = new LinkedList<>();
+       
         //src add
         q.add(0);
         while(!q.isEmpty()){
