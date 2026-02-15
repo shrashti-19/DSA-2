@@ -39,6 +39,7 @@ public class cycle2{
                 return true;
             }
         }
+        stack[curr] = false;
         return false;
     }
     public static void main(String args[]){
